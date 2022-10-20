@@ -1,0 +1,90 @@
+/*Чистові налаштування*/
+html,body, div,span,applet,object, iframe, h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,
+kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,
+thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,
+mark,audio,video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+/*--------------------*/
+
+/* TAGS */
+img {
+    /* max-width:100%; */
+}
+
+td {
+    width: 60px;
+    border: 1px solid yellow;
+    
+}
+
+#main {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 50px auto 50px auto;
+    max-width: 550px;
+    /* min-height: 500px; */
+    /* background-color: aquamarine;     */
+    border-radius: 20px;
+    box-shadow: 0 0 50px grey;
+    padding-bottom: 50px;
+}
+
+.top-head-image {
+    border-radius: 20px 20px 0 0;
+    max-width:100%;
+}
+
+.head-image {
+    /* display: inline-block; */
+    /* background-color: rgb(41, 116, 91); */
+    /* border: 3px dotted black; */
+    border-radius: 20px 20px 0 0;
+    margin-bottom: 35px;
+    
+
+
+}
+
+.calendar-body {
+    /* display: inline-block; */
+    background-color: grey;
+    border: 3px dotted black;
+    max-width: 450px;
+    min-height: 400px;
+    margin: auto;
+    /* margin-bottom: 50px; */
+}
