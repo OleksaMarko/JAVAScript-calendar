@@ -6,6 +6,9 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
 
 const weekNames = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su']
 
+
+const headImage = document.querySelector('.top-head-image');
+// console.log(headImage.src)
 // const container = document.getElementById('main')
 const calendarBody = document.querySelector('.calendar-body')
 const table = document.createElement('table')
@@ -15,10 +18,10 @@ table.appendChild(tbody)
 calendarBody.appendChild(table)
 // main.appendChild(calendarBody)
 
-            let currentDay = 1 
-
+let currentDay = 1 
 const tempDate = new Date()
 let monthNumber = tempDate.getMonth();
+
 
 
 // let currentMonth = tempDate.getMonth()
@@ -34,14 +37,17 @@ renderContent(tempDate)                   // tyt vuklukamo TEMPDATE
 
 function renderContent(day) {
   tbody.innerHTML = ''
+  tbody.className = 'calendar-elements'
   
   renderHead()
   renderWeekNames()
   renderCal(day)
+  setSeasonPeacture()
 }
 
 function renderHead() {
     const tr = document.createElement('tr')
+    tr.className = 'info-bar'
     const tdLeft = document.createElement('th')
     const thMonth = document.createElement('th')
     const tdRight = document.createElement('th')
@@ -111,14 +117,37 @@ function renderHead() {
   })
 }
 
+
+
+function setSeasonPeacture() {
+  if (monthNumber > 10 || monthNumber < 2) {
+    headImage.src = "./Images/04.webp"
+    // console.log('ffsasfa')
+  } else if (monthNumber > 1 && monthNumber < 5) {
+    headImage.src = "./Images/01.webp"
+    // console.log('222222')
+  } else if (monthNumber > 4 && monthNumber < 8) {
+    headImage.src = "./Images/02.webp"
+    // console.log('ffssfsfdsdfsdfsfasfa')
+  } else {
+    headImage.src = "./Images/03.webp"
+    // console.log('YRAAAAAAAAAAAAAAAA')
+  }
+
+}
+
+
+
 function renderWeekNames() {
   const tr = document.createElement('tr')
+  tr.className = 'weeks-row'
 
 
   for (let i = 0; i < 7; i++) {
     const td = document.createElement('td')
     td.innerHTML = weekNames[i]
     td.align = 'center'
+    td.className = 'week-names'
     tr.appendChild(td)
   }
 
@@ -170,17 +199,17 @@ function renderCal() {
                 td.innerHTML = prevMonth++;
             } else if (j >= firstDay - 1 && i < 1) {
                 td.innerHTML = day++;
-                td.style.background = '#e7e8e9' 
+                td.style.background = 'rgb(241 241 241)' 
             } else if (i >= 1 && day <= monthLength) {
                 td.innerHTML = day++;
-                td.style.background = '#e7e8e9'
+                td.style.background = 'rgb(241 241 241)'
             } else if (day >= monthLength) {
                 td.innerHTML = nextMonthDay++;
             } 
         tr.appendChild(td)        
         tbody.appendChild(tr)
           if (day === new Date().getDate() + 1 && new Date().getMonth() === tempDate.getMonth() && new Date().getFullYear() === tempDate.getFullYear()) {
-            td.style.background = '#4ab0d5'
+            td.style.background = 'rgb(208 208 208)'
             // console.log(new Date().getFullYear == tempDate.getFullYear());
           }
         }

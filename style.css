@@ -42,15 +42,33 @@ table {
 /*--------------------*/
 
 /* TAGS */
-img {
-    /* max-width:100%; */
+
+
+table {
+  border-collapse: separate;
+  border-spacing: 2;
 }
 
 td {
     width: 60px;
-    border: 1px solid yellow;
+    height: 60px;
+    border: 1px solid rgb(225, 225, 225);
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 600;
     
 }
+
+button {
+  margin: 5px;
+  padding: 5px;
+  font-size: large;
+  font-weight: 600;
+  border-radius: 3px;
+  border: 1px solid rgb(225, 225, 225);
+  background-color: rgb(246, 246, 246);
+}
+
 
 #main {
     font-family: Helvetica, Arial, sans-serif;
@@ -81,10 +99,33 @@ td {
 
 .calendar-body {
     /* display: inline-block; */
-    background-color: grey;
-    border: 3px dotted black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: grey;
+    border: 3px dotted black; */
     max-width: 450px;
     min-height: 400px;
     margin: auto;
     /* margin-bottom: 50px; */
+}
+
+
+/* .weeks-row {
+  align-items: center;
+} */
+
+.info-bar {
+  font-size: larger;
+  font-weight: 800;
+
+}
+
+.weeks-row {
+  font-size: larger;
+  font-weight: 700;
+}
+
+.weeks-row > *{
+  background-color: rgb(225, 225, 225);
 }
